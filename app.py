@@ -90,7 +90,7 @@ def home():
     google_client_id = os.environ.get("GOOGLE_CLIENT_ID", "NONE")
     return render_template_string(LOGIN_PAGE, google_client_id=google_client_id)
 
-@app.route('/login-submit',延 validation methods=[ 'POST' ])
+@app.route('/login-submit', validation methods=[ 'POST' ])
 @app.route('/login-submit', methods=['POST'])
 def login_submit():
     identity = request.form.get('identity')
